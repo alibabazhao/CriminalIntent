@@ -1,5 +1,6 @@
 package com.example.criminalintent;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -33,8 +34,13 @@ public class CrimeListFragment extends ListFragment {
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
+        //get the crime from the adapter
         Crime c=((CrimeAdapter)getListAdapter()).getItem(position);
         Log.d(TAG, c.getTitle()+" was clicked");
+
+        //start crimeActivity
+        Intent i=new Intent(getActivity(), CrimeActivity.class);
+        startActivity(i);
     }
 
     private class CrimeAdapter extends ArrayAdapter<Crime>{
