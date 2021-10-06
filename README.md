@@ -4,7 +4,6 @@
 
 Submitted by: **Ali Zhao**
 
-Time spent: **X** hours spent in total
 
 ## User Stories
 
